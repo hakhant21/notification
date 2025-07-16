@@ -27,6 +27,8 @@ class DatabaseSeeder extends Seeder
             ]
         ];
 
-        DB::table('users')->insert($users);
+        foreach($users as $user) {
+            User::create($user);
+        }
     }
 }
